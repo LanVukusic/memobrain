@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Memo } from "./Logic/Game";
-import { entropyOfGuess, evaluateState, Response } from "./Logic/Helpers";
+import { Response } from "./Logic/Helpers";
 import { Display } from "./Components/Display";
 export interface IState {
   colors: number[];
@@ -26,7 +26,7 @@ export const App = () => {
   let [count, setCount] = React.useState(0);
   let [lucky, setLucky] = React.useState(1.0);
   let [luckyArr, setLuckyArr] = React.useState<number[]>([]);
-  let [game, setGame] = React.useState<Memo>(new Memo());
+  let [game, _] = React.useState<Memo>(new Memo());
   let [stateHistory, setStateHistory] = React.useState<IState[]>([]);
   let [stateCount, setStateCount] = React.useState<number>(0);
   let [bestMove, setBestMove] = React.useState<number[]>([]);

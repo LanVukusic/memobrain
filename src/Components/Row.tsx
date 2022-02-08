@@ -15,7 +15,7 @@ import {
   StatNumber,
   useColorMode,
 } from "@chakra-ui/react";
-import { Icon, createIcon } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
 import { SVGProps, useState } from "react";
 import { NUGGET_COLOURS } from "../Logic/Game";
 
@@ -24,8 +24,6 @@ const CircleIcon = (
     OmitCommonProps<SVGProps<SVGSVGElement>, keyof IconProps> &
     IconProps & { as?: "svg" | undefined }
 ) => {
-  const { colorMode, toggleColorMode } = useColorMode();
-
   return (
     <Icon viewBox="0 0 200 200" {...props}>
       <path
